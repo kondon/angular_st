@@ -12,4 +12,14 @@ angular.module('App', ['LocationBar'])
 
     $scope.newTitle = '';
   };
+
+  $scope.filter = {
+    done: { done: true },
+    remaining: { done: false }
+  };
+  $scope.currentFilter = null;
+
+  $scope.changeFilter = function (filter) {
+    $scope.currentFilter = filter;
+  };
 }]);
