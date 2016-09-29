@@ -1,0 +1,9 @@
+study URLs
+
+■Angular
+http://8th713.github.io/LearnAngularJS/#/
+
+■Javascript
+http://qiita.com/matsuby/items/3f1c59e021508ca754d0
+http://biboroku.megaya.net/entry/2015/05/17/142858
+https://github.com/mixi-inc/JavaScriptTraining
