@@ -1,5 +1,5 @@
 angular.module('App', ['LocationBar'])
-.controller('MainController', ['$scope', function ($scope) {
+.controller('MainController', ['$scope', '$filter', function ($scope, $filter) {
   $scope.todos = [];
 
   $scope.newTitle = '';
@@ -22,4 +22,13 @@ angular.module('App', ['LocationBar'])
   $scope.changeFilter = function (filter) {
     $scope.currentFilter = filter;
   };
+
+  var where = $filter('filter');
+  $scope.$watch('todos', function (todos) {
+    var length = todos.length;
+
+    $scope.allCount = length;
+    $scope.doneCount = where(todos, $scope.filter.done).length;
+    $scope.remainingCount = length - $scope.doneCount;
+  }, true);
 }]);
